@@ -195,6 +195,12 @@ li a:hover{
     font-weight: 700;
     font-size: 14px;
     background-color: #C1FD9B;
+    transition:background-color .2s ease;
+}
+.hire-me:hover{
+    background:#212529;
+    color: #C1FD9B;
+    border: 2px solid #C1FD9B;
 }
 .dp img{
     width: 450px;
@@ -217,14 +223,12 @@ li a:hover{
     font-family: inter;
 }
 .skill-icons{
-    /* width: 50%; */
     display: grid;
     grid-template-columns: repeat(6, 0fr);
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 20px;
     justify-content: center;
     align-items: center;
-    /* background: rgb(88, 73, 73); */
 
 }
 .skill-icons div{
@@ -328,7 +332,6 @@ li a:hover{
     animation: move-down .3s linear;
     padding: 1em;
     width: 100%;
-    /* outline: 2px solid red; */
 }
 
 
@@ -410,7 +413,6 @@ li a:hover{
     animation: move-down .3s linear;
     padding: 1em;
     width: 100%;
-    /* outline: 2px solid red; */
 }
 
 
@@ -480,7 +482,6 @@ li a:hover{
 
 .footer-wrapper{
     width: 100%;
-    /* height: 380px; */
     background: #1C1C1C;
 }
 
@@ -506,7 +507,6 @@ li a:hover{
     border-radius: 10px;
     font-weight: 600;
     width: 80%;
-    /* height: 150px; */
     background: #C1FD9B;
    
 }
@@ -532,17 +532,14 @@ li a:hover{
     display: flex;
     gap: 10px;
     justify-content: space-between;
-    /* align-items: center; */
-    /* position: relative;  */
+   
     margin-top: 150px;
     padding-bottom: 50px;
-    /* background: rgb(232, 181, 181);  */
     color: #fff;
     font-family: inter;
 }
 
 .footer-holder .address{
-    /* line-height: 1.4; */
     font-weight: 500;
     font-size: 20px;
 }
@@ -566,7 +563,68 @@ li a:hover{
     text-decoration: underline #C1FD9B;
     color: #fffffe;
 }
+.contact-footer{
+    transition: .2s;
+}
+.contact-footer:hover{
+    background-color: #212529;
+    color: #C1FD9B;
+    
+}
 
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* Modal Box */
+.modal-content {
+    background: #212529;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    font-family: inter;
+    color: #C1FD9B;
+}
+.modal-content img{
+    border-radius: 25px;
+    width: 250px;
+    height: 250px;
+}
+.modal-content span{
+    color: #dddbdb;
+}
+/* Close Button */
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    text-decoration: none;
+    color: rgb(238, 238, 238);
+}
+
+/* Show Modal When Targeted */
+#modal:target {
+    visibility: visible;
+    opacity: 1;
+}
 
 @keyframes move-down {
     0%{
@@ -662,9 +720,7 @@ li a:hover{
         width: 250px;
         height: 80px; 
     }
-    /* .showcase div p{
-        font-size: 12px;
-    } */
+   
     .showcase{
         justify-content: center;
         flex-wrap: wrap;
@@ -692,10 +748,7 @@ li a:hover{
     }
 
     .skill-icons{
-        /* width: 50%; */
         display: grid;
-        /* grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(3, 1fr); */
         gap: 10px;
     }
 
@@ -847,23 +900,18 @@ li a:hover{
         min-width: 60%;
         border-radius: 20px;
         padding: 10px 0;
-        /* height: 600px; */
     }
     
     .about-text{
-        /* padding: 70px 0; */
         width: 90%;
-        /* background: #C1FD9B; */
     }
 
     .skills{
         flex-direction: column;
-        /* background: rgb(84, 55, 55); */
     }
 
     .skill-text{
         width: 100%;
-        /* text-align: center; */
     }
     .skill-text h2{
         font-size: 22px;
